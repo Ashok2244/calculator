@@ -1,0 +1,55 @@
+#%RAML 1.0
+title: calculator
+version: v1 
+traits:
+  error: !include Traits/errorcodes.raml
+  quary: !include Traits/queryparms.raml
+mediaType: 
+- application/json  
+  
+/addition:
+  get:
+    is: [error,quary]
+    responses:
+      200:
+        body:
+  
+            example: !include example/addition.responces.json
+              
+                    
+/multiplication:
+  post:
+   is: [error,quary]
+   responses:
+      201:
+        body:
+          example: !include example/multi-response.json
+
+
+
+
+/substraction:
+  put:
+    is: [error,quary]
+    responses:
+      200:
+        body:
+          
+            example: !include example/sub-response.json
+              
+      
+/Division:
+  delete:
+    is: [error,quary]
+    responses:
+      200:
+        body:
+          
+            example: !include example/div-response.json
+           
+      
+                      
+                        
+            
+          
+              

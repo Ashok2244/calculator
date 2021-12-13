@@ -1,0 +1,28 @@
+#%RAML 1.0 Trait
+
+responses:
+  
+   400:
+        body:
+          application/json:
+            example:
+              {
+                "message": bad request
+              }
+   500:
+        body:
+          application/json:
+            example:
+              {
+                "message": "Server not responding"
+              
+              }      
+
+queryParameters:
+      number:
+        type: integer
+        required: true
+        example: 100
+      number1:
+        type: integer
+        example: 10            
